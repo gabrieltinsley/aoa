@@ -4,7 +4,6 @@
  * @author mvail
  */
 public class MethodsToAnalyze {
-
 	/**
 	 * Return index where value is found in array or -1 if not found.
 	 * @param array ints where value may be found
@@ -12,6 +11,12 @@ public class MethodsToAnalyze {
 	 * @return index where value is found or -1 if not found
 	 */
 	public static int find(int[] array, int value) {
+		/*
+		 * for-loop intializes i and checks if that is less than array length
+		 * which returns false, so 2 statements happen no matter what
+		 */
+
+		 // t(n) = 2 + n(3) = 3n + 2
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == value) {
 				return i;
