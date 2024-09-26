@@ -32,6 +32,14 @@ public class MethodsToAnalyze {
 	 * @param newValue new value
 	 */
 	public static void replaceAll(int[] array, int oldValue, int newValue) {
+		/*
+		 * The int index is intialized then jumps into the find for loop, since n == 0, then 
+		 * the for-loop for find intializes i and checks if that is less than array length
+		 * which would be false and -1 is returned so the while loop is checked which would be false, 
+		 * so 4 statements happen no matter what
+		 */
+
+		 // t(n) = 4 + n(3 + 1 + n(3/2)) + 3(3n/2) = (3/2)n^2 + (15/2)n + 4
 		int index = find(array, oldValue);
 		while (index > -1) {
 			array[index] = newValue;
